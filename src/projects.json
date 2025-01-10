@@ -2,6 +2,7 @@
     {
         "title": "Video-based construction trench analysis",
         "description": "A customised end-to-end trench measurement solution for a US-based customer in the infrastructure industry. Accurate measurement of the 3D geometry of the trench as it was dug is critical to this customer to ensure quality, wastage prevention and timely delivery. Our video-based photogrammetric solution not only ensured accurate measurements of the trench, but we also created various customised measurements that were critical to progress monitoring.",
+        "icon": "icons/p1.jpg",
         "media": [
             "media/m8e6yw5lfbdupxwpc6da.mp4",
             "media/o2kfmn9dlqw4kj7hfb1k.mp4"
@@ -10,6 +11,7 @@
     {
         "title": "Video-based photogrammetric window measurements",
         "description": "An end-to-end product for window measurements in homes. We created an app that was used by salespeople to shoot videos, tag them by room, window type, material, colour and other attributes, and upload them to the cloud. There, we used our proprietary workflow to create highly accurate 3D models. Finally, we created a simple user interface shown in this video, where technicians could remotely pick points on images and create measurements from the underlying 3D models.",
+        "icon": "icons/p2.jpg",
         "media": [
             "media/e8tyirtj0hek3k9kmm5f.mp4"
         ]
@@ -17,6 +19,7 @@
     {
         "title": "Grinding burns and contact areas on gears",
         "description": "We were tasked by a US-based global gear manufacturer to detect grinding burns on one set of gears, and to demarcate the area of contact on the gear face and locate the center of contact. For both applications, we used a smartphone camera to acquire images, and used a two-phase AI model to achieve the goals. In the first phase, the gear faces were isolated and cropped out of the original images and in the second phase of each model, the grinding burn area or the area of contact was isolated in the cropped image.",
+        "icon": "icons/p3.jpg",
         "media": [
             "media/gkms2ewk7hbq2xv6a7qf.pdf"
         ]
@@ -24,6 +27,7 @@
     {
         "title": "Automated detection of defects on pinion gears",
         "description": "We were tasked with developing an end-to-end prototype system to inspect and detect defects on the faces of bevel gears. We developed 1) a prototype consisting of a single camera and three fixed light sources and a motorized spindle onto which a gear was loaded manually; 2) a machine learning model that was trained on about 500 customer parts to detect defects and c) an Android app that drove the motor to turn the gear so that one face was visible to the camera, and turned one light source on at a time and acquired an image. The resulting system was 98% accurate.",
+        "icon": "icons/p4.jpg",
         "media": [
             "media/o88pfhs8av0dupkmiifw.mp4"
         ]
@@ -31,6 +35,7 @@
     {
         "title": "Operator safety and danger warning",
         "description": "The customer faced unsafe working conditions on shop floor paths accessed by forklift trucks and workers. We developed an alert system based on video analysis. Our software raised an alarm whenever a human was detected outside of safe zones.",
+        "icon": "icons/p5.jpg",
         "media": [
             "media/bszsqcwnzthuisde0joc.pdf"
         ]
@@ -38,6 +43,7 @@
     {
         "title": "Automated pipe measurements using drone",
         "description": "Pipes in oil-field customer's yard are measured by three people working together, holding the two ends of a measuring tape and recording the measurement. This is a very tedious approach, leading to significant errors both in measurement and recording. We developed a comprehensive drone-based solution that imaged the pipes from above, and our app uploaded the images for cloud processing. The resulting measurements were accurate and in ready to use form for our customer.",
+        "icon": "icons/p6.jpg",
         "media": [
             "media/cgmwepikttievcnfchw4.pdf"
         ]
@@ -45,6 +51,7 @@
     {
         "title": "OCR for tyre classification and recording",
         "description": "Customer wanted to read markings and data directly off tires to reduce manual effort and eliminate human error.",
+        "icon": "icons/p7.jpg",
         "media": [
             "media/mcuk2fzdpt5zehv2cvby.pdf"
         ]
@@ -52,6 +59,7 @@
     {
         "title": "Automated pipe counting in oilfield operations",
         "description": "Pipe yard customer had hundreds of racks of oil pipes, each with hundreds of individual pipes stacked in roughly rectangular arrays. The current process of manual measurements was extremely tedious, and error-prone, with no documentation. We automated this process and obtained accurate counts and classification of large numbers of pipes.",
+        "icon": "icons/p8.jpg",
         "media": [
             "media/uast4zwfhoguj1gnuhg8.pdf"
         ]
@@ -59,6 +67,7 @@
     {
         "title": "Metal plate detection and measurement",
         "description": " A large US-based metal fabricator wanted to replace manual measurements of plates coming off rolls with automated vison-based measurements. We completed this task using a stereo camera and machine learning.",
+        "icon": "icons/p9.jpg",
         "media": [
             "media/nqngqolzdzdlpz0zprjr.pdf"
         ]
@@ -66,6 +75,7 @@
     {
         "title": "Video-based pallet dimension measurements",
         "description": "Warehouse operators wanted to automate measurements of pallets, without needing the forklift operators to stop their vehicles, get out and use a measuring tape. We successfully performed this task for them using video-based photogrammetric measurements.",
+        "icon": "icons/p10.jpg",
         "media": [
             "media/cpvqcgshf3ecefszakxr.pdf"
         ]

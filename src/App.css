@@ -1,6 +1,33 @@
+:root {
+--primary-color: #65a0dc;
+--secondary-color: #7099c3;
+--dark-text-color: #5f6a76;
+--light-text-color: #c9dff5;
+--background-color: #f0f8ff;
+}  
+
+::-webkit-scrollbar {
+  height: 3px;
+  width: 3px
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--dark-text-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   font-family: Arial, sans-serif;
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
 }
 
 .App-logo {
@@ -9,78 +36,135 @@
 }
 
 .App-header {
-  position: fixed;
   display: flex;
+  position: fixed;
+  width: inherit;
   align-items: center;
   justify-content: space-between;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #282c34;
-  color: white;
-  padding: 10px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background: white;
   z-index: 1000;
 }
 
 .App-header-company {
   display: flex;
   align-items: center;
+  background-color: var(--primary-color);
+  color: white;
   gap: 10px;
-  padding: 10px;
+  padding: 10px 50px 10px 10px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .App-header h1 {
   font-size: x-large;
 }
 
-.App-nav ul {
-  list-style: none;
+.App-header-sections {
   display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
+  padding: 0 20px;
 }
 
-.App-nav li {
-  margin: 0 15px;
+.App-header-section {
+  padding: 20px;
   cursor: pointer;
-  font-size: 18px;
-  color: white;
+  color: var(--secondary-color);
+  transition: all 0.3s ease-in-out;
 }
 
-.App-nav li:hover {
-  text-decoration: underline;
-}
-
-.App-nav li.selected {
+.App-header-section:hover {
+  scale: 1.1;
   font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.App-header-section.selected {
+  font-weight: bold;
+  color: var(--primary-color);
   text-decoration: underline;
+  transition: all 1s ease-in-out;
+}
+
+.App-main {
+  height: inherit;
 }
 
 .App-section {
-  height: 100vh;
-  padding: 50px;
+  background-color: var(--background-color);
+  display: flex;
+  height: inherit;
+}
+
+.App-about {
+  gap: 40px;
+}
+
+.App-about div{
+  flex: 1;
+}
+
+.App-about-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background: #f5f5f5;
-  border-bottom: 1px solid #ddd;
+  gap: 40px;
 }
 
-#about {
-  background: #f9fafb;
+.App-main h2 {
+  font-size: 4rem;
+  color: var(--primary-color);
 }
 
-#portfolio {
-  background: #e8f5e9;
+.App-main p {
+  font-size: 2rem;
+  color: #5f6a76;
 }
 
-#contact {
-  background: #e3f2fd;
+.App-about-image {
+  height: 100vh;
+  background-image: url("icons/p1.jpg");
+  background-size: cover;
 }
 
-.projects {
+.App-projects-section {
+  flex-direction: column;
+  padding: 60px 40px;
+  gap: 60px;
+}
+
+.App-projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates 3 equal-width columns */
+  gap: 20px;
+  padding: 0 100px;
+}
+
+.App-project {
+  background-color: var(--primary-color);
+  cursor: pointer;
+  border-radius: 1px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: #50637760 3px 3px;
+}
+
+.App-project:hover {
+  scale: 1.05;
+  box-shadow: #50637760 6px 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.App-project img {
   width: 100%;
+}
+
+.App-project h3 {
+  color: white;
+  padding: 20px;
+}
+
+.App-contact {
+  padding: 60px 40px;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
