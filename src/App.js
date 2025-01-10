@@ -3,12 +3,26 @@ import './App.css';
 import logo from './logo.png';
 import projects from './projects.json';
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 function App() {
   const sections = ['about', 'portfolio', 'contact'];
   const [selectedSection, setSelectedSection] = useState('about');
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+
+  var settings = {
+    className: "project-slider",
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };      
+
 
   const scrollToSection = (section) => {
     const sectionElement = document.getElementById(section);
@@ -66,16 +80,18 @@ function App() {
         <div id="portfolio" className="App-projects-section App-section">
           <h2>Our Projects</h2>
           <div className="App-projects">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="App-project"
-                onClick={() => openProjectModal(project)}
-              >
-                <img src={project.icon} alt="project" />
-                <h3>{project.title}</h3>
-              </div>
-            ))}
+            {/* <Slider {...settings}> */}
+              {projects.map((project, index) => (
+                <div
+                  key={index}
+                  className="App-project"
+                  onClick={() => openProjectModal(project)}
+                >
+                  <img src={project.icon} alt="project" />
+                  <h3>{project.title}</h3>
+                </div>
+              ))}
+            {/* </Slider> */}
           </div>
         </div>
         <div id="contact" className="App-contact">

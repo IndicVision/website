@@ -133,9 +133,9 @@
 .App-projects {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Creates 3 equal-width columns */
-  gap: 20px;
   padding: 0 100px;
-  height: 100%
+  height: 100%;
+  gap: 20px;
 }
 
 .App-project {
@@ -239,4 +239,12 @@
   border: none;
   font-size: 20px;
   cursor: pointer;
+}
+
+.project-slider {
+  max-width: 90vw;
+}
+
+.slick-slide {
+  margin: 0 10px;
 }
