@@ -121,7 +121,7 @@
 
 .App-about-image {
   height: 100vh;
-  background-image: url("icons/p1.jpg");
+  background-image: url("../public/icons/p1.jpg");
   background-size: cover;
 }
 
