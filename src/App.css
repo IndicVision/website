@@ -162,9 +162,64 @@
 }
 
 .App-contact {
-  padding: 60px 40px;
-  background-color: var(--background-color);
+  padding: 40px;
+  background-color: rgb(194, 194, 194);
   display: flex;
   flex-direction: column;
-  gap: 40px;
+}
+
+.App-contact h2 {
+  color: var(--dark-text-color);
+  font-size: 2rem;
+}
+
+.App-contact p {
+  color: var(--dark-text-color);
+  font-size: 1.2rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.modal-content h3 {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
 }
