@@ -85,13 +85,12 @@
 }
 
 .App-main {
-  height: inherit;
+  height: 100%;
 }
 
 .App-section {
   background-color: var(--background-color);
   display: flex;
-  height: inherit;
 }
 
 .App-about {
@@ -136,6 +135,7 @@
   grid-template-columns: repeat(4, 1fr); /* Creates 3 equal-width columns */
   gap: 20px;
   padding: 0 100px;
+  height: 100%
 }
 
 .App-project {

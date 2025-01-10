@@ -61,7 +61,7 @@ function App() {
             })}
           </div>
       </div>
-      <div id="contact" className="App-contact App-section">
+      <div id="contact" className="App-contact">
         <h2>Contact Us</h2>
         <p>Reach out to us for more information!</p>
       </div>
