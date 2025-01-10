@@ -8,6 +8,7 @@ function App() {
   const [selectedSection, setSelectedSection] = useState('about');
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const scrollToSection = (section) => {
     const sectionElement = document.getElementById(section);
@@ -19,12 +20,16 @@ function App() {
 
   const openProjectModal = (project) => {
     setSelectedProject(project);
-    setIsModalOpen(true);
+    setIsAnimating(true); // Start animation
+    setTimeout(() => setIsModalOpen(true), 10); // Open modal after animation starts
   };
 
   const closeProjectModal = () => {
-    setSelectedProject(null);
-    setIsModalOpen(false);
+    setIsAnimating(false); // Start exit animation
+    setTimeout(() => {
+      setSelectedProject(null);
+      setIsModalOpen(false); // Fully close modal after animation
+    }, 300); // Match the duration of the CSS animation
   };
 
   return (
@@ -76,28 +81,26 @@ function App() {
         <div id="contact" className="App-contact">
           <h2>Contact Us</h2>
           <p>Reach out to us for more information!</p>
-          <a href=''>purchases@indicvision.com</a>
         </div>
       </div>
 
-      {isModalOpen && selectedProject && (
-        <ProjectModal project={selectedProject} onClose={closeProjectModal} />
+      {selectedProject && (
+        <div
+          className={`modal-overlay ${isModalOpen ? 'modal-enter-active' : ''} ${
+            !isAnimating && isModalOpen ? 'modal-exit-active' : ''
+          }`}
+          onClick={closeProjectModal}
+        >
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closeProjectModal}>
+              ×
+            </button>
+            <h3>{selectedProject.title}</h3>
+            <p>{selectedProject.description}</p>
+            {selectedProject.media && <img src={selectedProject.icon} alt={selectedProject.title} />}
+          </div>
+        </div>
       )}
-    </div>
-  );
-}
-
-function ProjectModal({ project, onClose }) {
-  return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>
-          ×
-        </button>
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
-        <img src={project.icon} alt={project.title} />
-      </div>
     </div>
   );
 }
